@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPID Pesawaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#047857',
+                        accent: '#F59E0B'
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:py-6">
+                <div class="flex items-center space-x-4">
+                    <img src="img/logo-kabupatenpesawaran.png" alt="Logo Kabupaten Pesawaran" class="h-12 w-auto">
+                    <div class="hidden md:block">
+                        <h1 class="text-lg font-bold text-primary">PPID Pesawaran</h1>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium border-b-2 border-primary pb-1">Beranda</a>
+                    <a href="berita.html" class="text-gray-600 hover:text-primary transition-colors">Berita</a>
+
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary flex items-center space-x-1 transition-colors">
+                            <span>Profil</span>
+                            <i class="fas fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-48 py-1 z-10">
+                            <a href="struktur.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Struktur
+                                Organisasi</a>
+                            <a href="visi-misi.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visi Misi</a>
+                            <a href="tugas-fungsi.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tugas &
+                                Fungsi</a>
+                        </div>
+                    </div>
+                    <a href="layanan/agenda.html" class="text-gray-600 hover:text-primary transition-colors">Agenda</a>
+                    <a href="layanan/galeri.html" class="text-gray-600 hover:text-primary transition-colors">Galeri</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <form class="hidden md:block relative">
+                        <input type="text" placeholder="Cari informasi..."
+                            class="border border-gray-300 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm w-64">
+                        <button type="submit"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Berita Utama (col-span-2) -->
+                <article
+                    class="md:col-span-2 bg-white rounded-lg shadow-card hover:shadow-card-hover transition-shadow cursor-pointer">
+                    <img src="img/berita2.jpeg" alt="Deklarasi Damai PSU Pesawaran"
+                        class="w-full h-72 object-cover rounded-t-lg" />
+                    <div class="p-6">
+                        <h2
+                            class="text-3xl font-semibold text-gray-800 leading-tight mb-3 hover:underline transition-colors duration-300">
+                            Deklarasi Damai Pada Pemungutan Suara Ulang Bupati dan Wakil Bupati Pesawaran Tahun 2025
+                        </h2>
+                        <p class="text-sm text-gray-500 italic">Diposting oleh PPID Pesawaran - 10 Juli 2025</p>
+                        <p class="mt-4 text-gray-700 leading-relaxed">
+                            KPU Kabupaten Pesawaran menggelar deklarasi damai untuk memastikan pelaksanaan Pemungutan
+                            Suara
+                            Ulang (PSU) Pilkada berjalan dengan aman dan kondusif. Deklarasi ini melibatkan seluruh
+                            pasangan
+                            calon, tim sukses, serta stakeholder terkait guna menjaga stabilitas dan kedamaian selama
+                            proses
+                            demokrasi.
+                        </p>
+                        <blockquote class="border-l-4 border-primary pl-4 italic text-primary my-4">
+                            “Deklarasi ini penting untuk menjaga suasana damai selama proses PSU.” – Ketua KPU Pesawaran
+                        </blockquote>
+                        <p>
+                            Kegiatan ini menjadi momentum penting untuk memperkuat komitmen semua pihak dalam
+                            menyukseskan
+                            PSU yang transparan dan berintegritas demi kepentingan masyarakat Kabupaten Pesawaran.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Daftar Berita Kecil -->
+                <aside class="space-y-6">
+                    <!-- Berita 2 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita3.jpg" alt="PHPU Bupati Pesawaran"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                PHPU Bupati Pesawaran Pasca-PSU di Mahkamah Konstitusi
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 12 Juli 2025
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Berita 3 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita4.webp" alt="Debat Publik PSU Pesawaran"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                Debat Publik Antar Pasangan Calon Pada Pemungutan Suara Ulang
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 18 Mei 2025</p>
+                        </div>
+                    </article>
+
+                    <!-- Berita 4 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita5.jpeg" alt="Gedung DPRD Pesawaran Ambruk"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                Gedung DPRD Pesawaran Ambruk Jelang PSU Pilkada 2025
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 23 Mei 2025</p>
+                        </div>
+                    </article>
+
+                    <!-- Berita 5 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita6.jpg" alt="Pemprov Lampung Bantu PSU"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                Pemprov Lampung Bantu PSU Pilkada Pesawaran 2025
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 7 Mei 2025</p>
+                        </div>
+                    </article>
+
+                    <!-- Berita 6 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita7.jpeg" alt="Pembangunan Infrastruktur Pesawaran"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                Tiga Fokus Utama Pembangunan Infrastruktur di Kabupaten Pesawaran
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 26 April 2025
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Berita 7 -->
+                    <article class="flex space-x-4 cursor-pointer hover:bg-gray-50 rounded-md p-2 transition-colors">
+                        <img src="img/berita8.jpg" alt="Kesiapan DPRD Pesawaran"
+                            class="w-24 h-16 object-cover rounded-md" />
+                        <div>
+                            <h3
+                                class="text-sm font-semibold text-gray-800 hover:underline transition-colors duration-300">
+                                Kesiapan DPRD Pesawaran Usulkan Pengesahan Bupati dan Wakil Bupati Terpilih 2025
+                            </h3>
+                            <p class="text-xs text-gray-500 italic mt-1">Diposting oleh PPID Pesawaran - 4 Juli 2025</p>
+                        </div>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">PPID Pesawaran</h3>
+                    <p class="text-gray-400 text-sm">Pejabat Pengelola Informasi dan Dokumentasi Kabupaten Pesawaran,
+                        Provinsi Lampung.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Beranda</a>
+                        </li>
+                        <li><a href="profil.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Profil
+                                PPID</a>
+                        </li>
+                        <li><a href="tautancepat/informasi-public.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Informasi
+                                Publik</a></li>
+                        <li><a href="tautancepat/permohonan-informasi.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Permohonan
+                                Informasi</a></li>
+                        <li><a href="tautancepat/regulasi.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Regulasi</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="layanan/pengaduan.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Pengaduan</a>
+                        </li>
+                        <li><a href="layanan/faq.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">FAQ</a></li>
+                        <li><a href="layanan/dokumen.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Dokumen
+                                Publik</a></li>
+                        <li><a href="layanan/galeri.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Galeri</a></li>
+                        <li><a href="#layanan/agenda.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Agenda</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>Komplek Perkantoran Pemda Pesawaran, Lampung</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <span>(0721) 123456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>ppid@pesawarankab.go.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 PPID Kabupaten Pesawaran. Seluruh hak cipta
+                    dilindungi.</p>
+                <div class="flex space-x-6">
+                    <a href="kebijakan-privasi.html"
+                        class="text-gray-400 hover:text-white text-sm transition-colors">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.html"
+                        class="text-gray-400 hover:text-white text-sm transition-colors">Syarat
+                        & Ketentuan</a>
+                    <a href="peta-situs.html" class="text-gray-400 hover:text-white text-sm transition-colors">Peta
+                        Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>

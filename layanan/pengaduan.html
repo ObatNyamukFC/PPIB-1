@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Pengaduan - PPID Kabupaten Pesawaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+    <main class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-md my-12">
+        <form action="/submit-pengaduan" method="POST" class="space-y-6" novalidate>
+            <div>
+                <label for="nama" class="block mb-2 font-semibold">Nama Lengkap <span
+                        class="text-red-600">*</span></label>
+                <input type="text" id="nama" name="nama" required
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <div>
+                <label for="email" class="block mb-2 font-semibold">Email <span class="text-red-600">*</span></label>
+                <input type="email" id="email" name="email" required
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <div>
+                <label for="telepon" class="block mb-2 font-semibold">Nomor Telepon</label>
+                <input type="tel" id="telepon" name="telepon"
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <div>
+                <label for="isiPengaduan" class="block mb-2 font-semibold">Isi Pengaduan <span
+                        class="text-red-600">*</span></label>
+                <textarea id="isiPengaduan" name="isiPengaduan" rows="5" required
+                    class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+
+            <button type="submit"
+                class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
+                Kirim Pengaduan
+            </button>
+        </form>
+
+        <p class="mt-6 text-sm text-gray-600">
+            * Semua data yang Anda berikan akan kami jaga kerahasiaannya sesuai dengan kebijakan privasi.
+        </p>
+    </main>
+</body>
+
+</html>

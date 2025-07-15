@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Informasi Publik - Bidang Diskominfotiksan Pesawaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#047857',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-50 font-sans text-gray-800">
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center space-x-4">
+            <img src="../img/logo-kabupatenpesawaran.png" alt="Logo Kabupaten Pesawaran" class="h-12" />
+            <h1 class="text-xl font-bold text-primary">Bidang di Diskominfo Kab. Pesawaran</h1>
+        </div>
+    </header>
+
+    <!-- Konten dibungkus agar dorong footer ke bawah -->
+    <div class="flex-grow">
+        <main class="max-w-4xl mx-auto p-6">
+            <p class="mb-6 text-gray-700">
+                Berikut adalah 5 bidang utama yang ada di Dinas Komunikasi, Informatika, Statistik dan Persandian
+                Kabupaten
+                Pesawaran:
+            </p>
+            <ol class="list-decimal list-inside space-y-3 text-gray-800 font-medium">
+                <li><strong>Sistem Informasi dan Statistik</strong>
+                    <span class="block text-gray-600 text-sm">Develop Sistem dan Visualisasi Data</span>
+                </li>
+                <li><strong>Insfrastruktur Telematika dan Persandian</strong>
+                    <span class="block text-gray-600 text-sm">Jaringan dan Keamanan Siber</span>
+                </li>
+                <li><strong>Sumber Daya Komunikasi dan Akses Informasi</strong>
+                    <span class="block text-gray-600 text-sm">Rilis Kegiatan dan Berita</span>
+                </li>
+                <li><strong>Pengelolaan dan Pelayanan Publik</strong>
+                    <span class="block text-gray-600 text-sm">Media Sosial</span>
+                </li>
+                <li><strong>Umum dan Kepegawaian</strong>
+                    <span class="block text-gray-600 text-sm">Administrasi Perkantoran</span>
+                </li>
+            </ol>
+        </main>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm mt-auto">
+        &copy; 2025 PPID Kabupaten Pesawaran. Seluruh hak cipta dilindungi.
+    </footer>
+</body>
+
+</html>

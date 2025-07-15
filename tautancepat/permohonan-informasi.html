@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Permohonan Informasi Publik - PPID Kabupaten Pesawaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#047857',
+                        accent: '#F59E0B'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center space-x-4">
+            <img src="../img/logo-kabupatenpesawaran.png" alt="Logo Kabupaten Pesawaran" class="h-12" />
+            <h1 class="text-xl font-bold text-primary">Permohonan Informasi Publik</h1>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
+        <section>
+            <h3 class="text-xl font-semibold mb-3">Tata Cara Pengajuan Permohonan</h3>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                <li><strong>Tentukan Informasi</strong> yang ingin Anda peroleh secara jelas dan spesifik.</li>
+                <li><strong>Isi Formulir Permohonan</strong> di bawah tanpa perlu mencantumkan identitas pribadi.</li>
+                <li><strong>Kirimkan Permohonan</strong> melalui email, pos, atau datang langsung ke kantor PPID.</li>
+                <li><strong>Proses Verifikasi</strong> akan dilakukan oleh PPID tanpa mengungkapkan identitas Anda.</li>
+                <li><strong>Informasi akan diberikan</strong> sesuai prosedur dalam waktu maksimal 10 hari kerja.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3 class="text-xl font-semibold mb-3">Formulir Permohonan Informasi</h3>
+            <form action="proses-permohonan.php" method="post" class="space-y-4 bg-white p-6 rounded shadow-md">
+                <div>
+                    <label for="informasi" class="block font-medium mb-1">Informasi yang Dimohon <span
+                            class="text-red-600">*</span></label>
+                    <textarea id="informasi" name="informasi" rows="4" required
+                        class="w-full border border-gray-300 rounded px-3 py-2 resize-y"
+                        placeholder="Tuliskan informasi yang Anda butuhkan secara jelas dan spesifik..."></textarea>
+                </div>
+                <div>
+                    <label for="cara_terima" class="block font-medium mb-1">Cara Menerima Informasi <span
+                            class="text-red-600">*</span></label>
+                    <select id="cara_terima" name="cara_terima" required class="w-full border border-gray-300 rounded px-3 py-2"
+                        disabled>
+                        <option value="email" selected>Email</option>
+                    </select>
+                    <input type="hidden" name="cara_terima" value="email" />
+                </div>
+                  
+
+                <div>
+                    <label for="alamat_kontak" class="block font-medium mb-1">Alamat Email <span
+                            class="text-red-600">*</span></label>
+                    <input type="text" id="alamat_kontak" name="alamat_kontak" required
+                        placeholder="Masukkan alamat email atau alamat pos untuk pengiriman informasi"
+                        class="w-full border border-gray-300 rounded px-3 py-2" />
+                </div>
+
+                <div>
+                    <label for="keterangan" class="block font-medium mb-1">Keterangan Tambahan (Opsional)</label>
+                    <textarea id="keterangan" name="keterangan" rows="3"
+                        class="w-full border border-gray-300 rounded px-3 py-2 resize-y"
+                        placeholder="Jika ada keterangan tambahan, tuliskan di sini..."></textarea>
+                </div>
+
+                <button type="submit" class="bg-primary text-white py-2 px-6 rounded hover:bg-blue-800 transition">Kirim
+                    Permohonan</button>
+            </form>
+        </section>
+        <section>
+            <h3 class="text-xl font-semibold mb-3">Kontak PPID</h3>
+            <ul class="list-disc list-inside text-gray-700">
+                <li>Telepon: (0721) XXX-XXX</li>
+                <li>Email: ppid.pesawaran@email.com</li>
+                <li>Alamat: Jl. Contoh Alamat No. 123, Kabupaten Pesawaran</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-6 mt-20 text-center text-sm">
+        &copy; 2025 PPID Kabupaten Pesawaran. Seluruh hak cipta dilindungi.
+    </footer>
+</body>
+
+</html>

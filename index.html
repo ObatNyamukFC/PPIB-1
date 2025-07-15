@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPID Pesawaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#047857',
+                        accent: '#F59E0B'
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:py-6">
+                <div class="flex items-center space-x-4">
+                    <img src="img/logo-kabupatenpesawaran.png" alt="Logo Kabupaten Pesawaran" class="h-12 w-auto">
+                    <div class="hidden md:block">
+                        <h1 class="text-lg font-bold text-primary">PPID Pesawaran</h1>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-medium border-b-2 border-primary pb-1">Beranda</a>
+                    <a href="berita.html" class="text-gray-600 hover:text-primary transition-colors">Berita</a>
+
+                    <div class="relative group">
+                        <button class="text-gray-600 hover:text-primary flex items-center space-x-1 transition-colors">
+                            <span>Profil</span>
+                            <i class="fas fa-chevron-down text-xs mt-0.5"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-md rounded-md mt-2 w-48 py-1 z-10">
+                            <a href="profil.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Struktur
+                                Organisasi</a>
+                            <a href="profil.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visi Misi</a>
+                        </div>
+                    </div>
+                    <a href="layanan/agenda.html" class="text-gray-600 hover:text-primary transition-colors">Agenda</a>
+                    <a href="layanan/galeri.html" class="text-gray-600 hover:text-primary transition-colors">Galeri</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <form class="hidden md:block relative">
+                        <input type="text" placeholder="Cari informasi..."
+                            class="border border-gray-300 rounded-full py-2 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm w-64">
+                        <button type="submit"
+                            class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="relative">
+        <div class="swiper heroSwiper h-[500px]">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/80"></div>
+                    <img src="img/fotogerbang.png" alt="Gerbang Pesawaran" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Selamat Datang
+                                di<br>PPID Kabupaten Pesawaran</h1>
+                            <p class="text-xl max-w-2xl mb-8">Portal resmi Pejabat Pengelola Informasi dan Dokumentasi
+                                Pemerintah Kabupaten Pesawaran</p>
+                            <a href="#"
+                                class="inline-block bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-md">
+                                Lihat Informasi Publik <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <div class="absolute inset-0 from-primary/90 to-secondary/80"></div>
+                    <img src="img/promosi.jpg" alt="Kantor Pemerintah" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="swiper-pagination !bottom-8"></div>
+            <div class="swiper-button-next !right-8 !text-white hover:!text-accent"></div>
+            <div class="swiper-button-prev !left-8 !text-white hover:!text-accent"></div>
+        </div>
+    </section>
+
+    <!-- Berita Terkini -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita Terkini</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Informasi terbaru seputar kegiatan dan perkembangan di
+                    Kabupaten Pesawaran</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/promosi.jpg" alt="Berita 1"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>Pesawaran, 26 Juni 2025
+                        </div>
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">Pemkab Pesawaran Gandeng IPB Gelar Pelatihan
+                        Optimalisasi SiaranPers Berbasis AI
+                        </h3>
+                        <p class="text-gray-600 mb-4">Pemerintah Kabupaten (Pemkab) Pesawaran melalui Dinas Komunikasi, Informatika, Statistik dan Persandian
+                        (Diskominfotik) bekerja sama dengan Institut Pertanian Bogor (IPB) menggelar pelatihan bagi 30
+                        administrator media sosial dari Organisasi Perangkat Daerah (OPD) se-Kabupaten Pesawaran. Kegiatan ini
+                        berfokus pada optimalisasi produksi siaran pers berbasis kecerdasan buatan (Artificial Intelligence/AI).</p>
+                        <a href="berita/berita1.html" class="text-primary font-medium hover:underline flex items-center">
+                            Baca selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/berita2.jpeg" alt="Berita 2"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i> Pesawaran, 10 Juli 2025
+                        </div>
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">Deklarasi Damai Pada Pemungutan Suara Ulang Bupati
+                        dan Wakil Bupati Pesawaran Tahun 2025</h3>
+                        <p class="text-gray-600 mb-4">KPU Kabupaten Pesawaran menggelar deklarasi damai untuk memastikan pelaksanaan Pemungutan Suara Ulang
+                        (PSU) Pilkada berjalan dengan aman dan kondusif. Deklarasi ini melibatkan seluruh pasangan calon, tim
+                        sukses, serta stakeholder terkait guna menjaga stabilitas dan kedamaian selama proses demokrasi.<</p>
+                        <a href="berita/berita2.html" class="text-primary font-medium hover:underline flex items-center">
+                            Baca selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300">
+                    <div class="relative">
+                        <img src="img/berita3.jpg" alt="Berita 3" class="w-full h-48 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                            <p>oke</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <i class="far fa-calendar-alt mr-2"></i>Pesawaran, 12 Juli 2025
+                        </div>
+                        <h3 class="font-bold text-xl mb-3 text-gray-800">PHPU Bupati Pesawaran Pasca-PSU di Mahkamah Konstitusi</h3>
+                        <p class="text-gray-600 mb-4">Pasangan calon Bupati Pesawaran mengajukan permohonan perselisihan hasil Pemungutan Suara Ulang (PSU) ke
+                        Mahkamah Konstitusi (MK) terkait keabsahan hasil pemilihan. Proses ini merupakan bagian dari mekanisme
+                        hukum untuk memastikan transparansi dan keadilan dalam pelaksanaan Pilkada.</p>
+                        <a href="berita/berita3.html"
+                            class="text-primary font-medium hover:underline flex items-center">
+                            Baca selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="berita.html"
+                    class="inline-flex items-center px-6 py-3 border border-primary text-base font-medium rounded-md text-primary bg-white hover:bg-primary hover:text-white transition-colors shadow-md">
+                    Lihat Semua Berita <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#"
+                    class="bg-primary hover:bg-primary/90 text-white rounded-xl p-6 text-center transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-alt text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Informasi Publik</h3>
+                    <p class="text-sm opacity-90">Akses informasi yang wajib disediakan</p>
+                </a>
+                <a href="#"
+                    class="bg-secondary hover:bg-secondary/90 text-white rounded-xl p-6 text-center transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-file-signature text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Permohonan Informasi</h3>
+                    <p class="text-sm opacity-90">Ajukan permohonan informasi publik</p>
+                </a>
+                <a href="#"
+                    class="bg-accent hover:bg-accent/90 text-white rounded-xl p-6 text-center transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Dokumen Publik</h3>
+                    <p class="text-sm opacity-90">Unduh dokumen dan publikasi resmi</p>
+                </a>
+                <a href="#"
+                    class="bg-gray-800 hover:bg-gray-700 text-white rounded-xl p-6 text-center transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-question-circle text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">FAQ</h3>
+                    <p class="text-sm opacity-90">Pertanyaan yang sering diajukan</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publikasi -->
+    <section class="py-16 bg-gradient-to-b from-primary to-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Publikasi Terkini</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="img/berita6.jpg" alt="Buletin Info Bencana Mei 2025"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800"></h3>
+                        <p class="text-gray-600 text-sm mb-4"></p>
+                        <a href="#" class="text-primary font-medium text-sm hover:underline flex items-center">
+                            Unduh <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="img/berita4.webp" alt="Buletin April"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800"></h3>
+                        <p class="text-gray-600 text-sm mb-4"></p>
+                        <a href="berita/berita4.html" class="text-primary font-medium text-sm hover:underline flex items-center">
+                            Unduh <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="img/berita5.jpeg" alt="Laporan Tahunan"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800"></h3>
+                        <p class="text-gray-600 text-sm mb-4"></p>
+                        <a href="#" class="text-primary font-medium text-sm hover:underline flex items-center">
+                            Unduh <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="img/berita7.jpeg" alt="Jurnal Pembangunan"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800"></h3>
+                        <p class="text-gray-600 text-sm mb-4"></p>
+                        <a href="#" class="text-primary font-medium text-sm hover:underline flex items-center">
+                            Unduh <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="berita.html"
+                    class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accent/90 shadow-md">
+                    Lihat Semua Publikasi <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hubungi Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Silakan hubungi kami jika Anda membutuhkan informasi
+                    lebih lanjut</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-xl shadow-card">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Informasi Kontak</h3>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-gray-900">Telepon/WhatsApp</h4>
+                                <p class="mt-1 text-gray-600">+62 812 3456 7890</p>
+                                <p class="mt-1 text-gray-600">+62 821 9876 5432</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-gray-900">Email</h4>
+                                <a href="mailto:ppid@pesawarankab.go.id"
+                                    class="mt-1 text-primary hover:underline block">ppid@pesawarankab.go.id</a>
+                                <a href="mailto:info@pesawarankab.go.id"
+                                    class="mt-1 text-primary hover:underline block">info@pesawarankab.go.id</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-gray-900">Alamat Kantor</h4>
+                                <a href="https://maps.app.goo.gl/jpr3uQeGuKH3tYFGA" target="_blank"
+                                    class="mt-1 text-gray-600 hover:text-primary hover:underline block">
+                                    Komplek Perkantoran Pemerintah Daerah<br>
+                                    Kabupaten Pesawaran, Lampung 35366
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary/10 p-3 rounded-lg text-primary">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-gray-900">Jam Operasional</h4>
+                                <p class="mt-1 text-gray-600">Senin - Kamis: 08.00 - 16.00 WIB</p>
+                                <p class="mt-1 text-gray-600">Jumat: 08.00 - 16.30 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-card lg:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap
+                                    <span class="text-red-500">*</span></label>
+                                <input type="text" id="nama" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Alamat Email
+                                    <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="Masukkan alamat email">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="no_telepon" class="block text-sm font-medium text-gray-700 mb-1">Nomor
+                                    Telepon <span class="text-red-500">*</span></label>
+                                <input type="tel" id="no_telepon" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="Masukkan nomor telepon">
+                            </div>
+                            <div>
+                                <label for="subjek" class="block text-sm font-medium text-gray-700 mb-1">Subjek <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" id="subjek" required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    placeholder="Subjek pesan">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Pesan Anda</label>
+                            <textarea id="pesan" rows="4"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                placeholder="Tulis pesan Anda disini..."></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg shadow-md transition-all flex items-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i> Kirim Pesan
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-white rounded-xl shadow-card overflow-hidden">
+                <div class="h-96 w-full">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127491.29099737552!2d105.075!3d-5.522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c5c8f9fce5c3%3A0x28c4133f410cb53a!2sDINAS%20KOMUNIKASI%20DAN%20INFORMATIKA%2C%20Waylayap%2C%20Gedong%20Tataan%2C%20Kabupaten%20Pesawaran%2C%20Lampung%2035366!5e1!3m2!1sid!2sid!4v1720426318000!5m2!1sid!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik Pengunjung -->
+    <section class="py-12 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Statistik Pengunjung</h2>
+                <p class="text-white/90">Data kunjungan ke website PPID Kabupaten Pesawaran</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bg-white/10 p-6 rounded-xl text-center backdrop-blur-sm w-64">
+                    <div class="text-4xl font-bold mb-2">9,537</div>
+                    <div class="text-sm">Total Pengunjung</div>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl text-center backdrop-blur-sm w-64">
+                    <div class="text-4xl font-bold mb-2">3</div>
+                    <div class="text-sm">Pengunjung Hari Ini</div>
+                </div>
+                <div class="bg-white/10 p-6 rounded-xl text-center backdrop-blur-sm w-64">
+                    <div class="text-4xl font-bold mb-2">2</div>
+                    <div class="text-sm">Pengunjung Online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">PPID Pesawaran</h3>
+                    <p class="text-gray-400 text-sm">Pejabat Pengelola Informasi dan Dokumentasi Kabupaten Pesawaran,
+                        Provinsi Lampung.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Beranda</a>
+                        </li>
+                        <li><a href="profil.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Profil PPID</a>
+                        </li>
+                        <li><a href="tautancepat/informasi-public.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Informasi
+                                Publik</a></li>
+                        <li><a href="tautancepat/permohonan-informasi.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Permohonan
+                                Informasi</a></li>
+                        <li><a href="tautancepat/regulasi.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Regulasi</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="layanan/pengaduan.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Pengaduan</a>
+                        </li>
+                        <li><a href="layanan/faq.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">FAQ</a></li>
+                        <li><a href="pages/dokumen.php"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Dokumen
+                                Publik</a></li>
+                        <li><a href="layanan/galeri.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Galeri</a></li>
+                        <li><a href="layanan/agenda.html"
+                                class="text-gray-400 hover:text-white transition-colors text-sm">Agenda</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>Komplek Perkantoran Pemda Pesawaran, Lampung</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <span>(0721) 123456</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>ppid@pesawarankab.go.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 PPID Kabupaten Pesawaran. Seluruh hak cipta
+                    dilindungi.</p>
+                <div class="flex space-x-6">
+                    <a href="kebijakan-privasi.html"
+                        class="text-gray-400 hover:text-white text-sm transition-colors">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.html"
+                        class="text-gray-400 hover:text-white text-sm transition-colors">Syarat & Ketentuan</a>
+                    <a href="peta-situs.html" class="text-gray-400 hover:text-white text-sm transition-colors">Peta
+                        Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Swiper
+        const heroSwiper = new Swiper(".heroSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const no_telepon = document.getElementById('no_telepon').value;
+            const subjek = document.getElementById('subjek').value;
+            const pesan = document.getElementById('pesan').value;
+
+            // Simple validation
+            if (!nama || !email || !no_telepon || !subjek) {
+                alert('Mohon lengkapi semua field yang wajib diisi (ditandai dengan *)');
+                return;
+            }
+
+            // Here you would typically send the data to a server
+            // For demo purposes, we'll just show an alert
+            alert(`Terima kasih ${nama}, pesan Anda telah berhasil dikirim. Kami akan segera menghubungi Anda melalui email ${email} atau nomor telepon ${no_telepon}.`);
+
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
